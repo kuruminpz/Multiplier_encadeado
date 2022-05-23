@@ -19,10 +19,10 @@ def listar(self, lst):
 
 
 def produto(self, ftr1, ftr2):
-    # Converter a string recebida divida numa lista encadeada
-    lista_fator1 = listar(ftr1)  # lista que armazena o fator1
-    lista_fator2 = listar(ftr2)  # lista que armazena o fator2
-    lista_final = Lista_Dupla()  # lista que armazena o resultado
+
+    lista_fator1 = listar(ftr1)
+    lista_fator2 = listar(ftr2)
+    lista_final = Lista_Dupla()
     final1 = lista_fator1.tail
     final2 = lista_fator2.tail
     final1_result = None
