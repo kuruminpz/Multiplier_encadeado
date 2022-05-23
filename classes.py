@@ -46,3 +46,33 @@ class Lista_Dupla:
             self.tail = no
         self.size += 1
 
+    def del_head(self):
+        if self.vazia():
+            raise TypeError("Lista está vazia!")
+        elif self.size == 1:
+            self.head = None
+            self.tail = None
+        else:
+            self.head = self.head.next
+            self.head.prev = None
+        self.size -= 1
+
+    def del_tail(self):
+        if self.vazia():
+            raise TypeError("Lista está vazia!")
+        elif self.size == 1:
+            self.del_head()
+        else:
+            self.tail = self.tail.prev
+            self.tail.next = None
+        self.size -= 1
+
+    def pop_head(self):
+        valor = self.head.dado
+        self.del_head()
+        return valor
+
+    def pop_tail(self):
+        valor = self.tail.dado
+        self.del_tail()
+        return valor
