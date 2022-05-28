@@ -3,8 +3,8 @@ from functions import *
 
 print("\t\t\tCalculo duplamente encadeado de \n\tfatores grandes demais para um espaço pequeno.")
 
-fator1 = separador(input("Escreva uma string numérica: "))
-fator2 = separador(input("Escreva uma string numérica: "))
+fator1 = input("Escreva uma string numérica: ")
+fator2 = input("Escreva uma string numérica: ")
 
 resultado = produto(fator1, fator2)
 

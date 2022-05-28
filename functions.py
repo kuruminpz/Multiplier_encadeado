@@ -1,26 +1,20 @@
 from classes import *
 
 
-def separador(string):
-    list = []
-    counter = 0
-    if len(string) % 2 == 1:
-        list.append(string[0])
-        counter += 1
-    list += [string[i:i + 2] for i in range(counter, len(string), 2)]
-    return list
-
-
-def listar(lst):
+def separador(str):
     lista_dupla = Lista_Dupla()
-    for i in lst:
-        lista_dupla.add_tail(i)
+    counter = 0
+    tam = len(str)
+    if(tam%2==1):
+        lista_dupla.add_tail(str[0])
+        counter+=1
+    for i in range(counter, tam, 2):
+        lista_dupla.add_tail(str[i:i+2])
     return lista_dupla
 
-
 def produto(ftr1, ftr2):
-    list_factor1 = listar(ftr1)
-    list_factor2 = listar(ftr2)
+    list_factor1 = separador(ftr1)
+    list_factor2 = separador(ftr2)
     list_final = Lista_Dupla()
     final1 = list_factor1.tail
     final2 = list_factor2.tail
